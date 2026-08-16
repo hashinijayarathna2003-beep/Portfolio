@@ -20,6 +20,20 @@ const Education = () => {
         <h2 className="section-title">Education</h2>
         
         <div className="timeline">
+          {/* School */}
+          <div className="timeline-item card">
+            <div className="timeline-icon">
+              <GraduationCap size={24} />
+            </div>
+            <div className="timeline-content">
+              <div className="timeline-header">
+                <h3>G.C.E. Advanced Level (A/L)</h3>
+                <span className="timeline-badge">School</span>
+              </div>
+              <h4 className="timeline-institution">Matara Central College, Matara</h4>
+            </div>
+          </div>
+
           {/* University */}
           <div className="timeline-item card">
             <div className="timeline-icon">

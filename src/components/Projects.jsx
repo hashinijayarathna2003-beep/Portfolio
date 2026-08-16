@@ -5,6 +5,18 @@ import './Projects.css';
 const Projects = () => {
   const projectsList = [
     {
+      id: 4,
+      title: 'AquaGrow – Smart Hydroponic System',
+      status: 'Academic Group Project',
+      description: 'AquaGrow is a smart hydroponic system designed to support efficient indoor plant cultivation by integrating IoT-based monitoring, data analysis, demand forecasting, and supply chain concepts. The project focuses on using technology and data-driven decision making to improve plant-growing efficiency and resource management.',
+      contribution: '',
+      technologies: ['IoT', 'Demand Forecasting', 'Supply Chain Management', 'Data Analysis'],
+      features: [],
+      image: '/aquagrow.jpg',
+      github: '',
+      demo: ''
+    },
+    {
       id: 1,
       title: 'OpenSpace – Smart Parking Marketplace',
       status: 'Currently in Development',
@@ -48,6 +60,11 @@ const Projects = () => {
         <div className="projects-grid">
           {projectsList.map((project) => (
             <div key={project.id} className="project-card card">
+              {project.image && (
+                <div className="project-image-container">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </div>
+              )}
               <div className="project-content-wrapper">
                 <div className="project-overview">
                   <div className="project-header">
@@ -60,26 +77,32 @@ const Projects = () => {
                   </div>
                   <p className="project-description">{project.description}</p>
                   
-                  <div className="project-section">
-                    <h4><Code size={16} /> Problem Solved</h4>
-                    <p>{project.problem}</p>
-                  </div>
+                  {project.problem && (
+                    <div className="project-section">
+                      <h4><Code size={16} /> Problem Solved</h4>
+                      <p>{project.problem}</p>
+                    </div>
+                  )}
                   
-                  <div className="project-section">
-                    <h4><Code size={16} /> My Contribution</h4>
-                    <p>{project.contribution}</p>
-                  </div>
+                  {project.contribution && (
+                    <div className="project-section">
+                      <h4><Code size={16} /> My Contribution</h4>
+                      <p>{project.contribution}</p>
+                    </div>
+                  )}
                 </div>
 
                 <div className="project-details">
-                  <div className="project-section">
-                    <h4><Code size={16} /> Key Features</h4>
-                    <ul className="project-features">
-                      {project.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  {project.features && project.features.length > 0 && (
+                    <div className="project-section">
+                      <h4><Code size={16} /> Key Features</h4>
+                      <ul className="project-features">
+                        {project.features.map((feature, idx) => (
+                          <li key={idx}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
                   {project.technologies && project.technologies.length > 0 && (
                     <div className="project-tags">
