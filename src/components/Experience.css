@@ -1,0 +1,6 @@
+.experience {
+  background-color: var(--bg-card);
+}
+
+/* Inherits timeline styles from Education.css */
+/* I will create a specific class for the badge if needed, but it shares structure with Education */

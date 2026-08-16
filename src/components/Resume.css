@@ -1,0 +1,118 @@
+.resume {
+  background-color: var(--bg-card);
+}
+
+.resume-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  padding: var(--spacing-3xl);
+  background: linear-gradient(to right, var(--bg-card), var(--bg-color));
+  border: 1px solid var(--border-color);
+}
+
+.resume-title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-main);
+}
+
+.resume-description {
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.resume-summary {
+  margin-bottom: var(--spacing-xl);
+}
+
+.resume-summary h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-main);
+}
+
+.resume-summary ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.resume-summary li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.check-icon {
+  color: var(--secondary-accent);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.resume-btn {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.resume-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.resume-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-document {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 200px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  transform: rotate(3deg);
+  transition: transform var(--transition-normal);
+}
+
+.resume-document:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.resume-document span {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .resume-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: var(--spacing-2xl);
+  }
+
+  .resume-summary ul {
+    text-align: left;
+  }
+
+  .resume-visual {
+    order: -1;
+    margin-bottom: var(--spacing-xl);
+  }
+}
