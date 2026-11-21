@@ -3,6 +3,8 @@ import { Globe, Code, Mail, Download, ArrowRight } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section id="home" className="hero">
       <div className="container hero-container">
@@ -15,12 +17,12 @@ const Hero = () => {
           <p className="hero-summary">
             I am a passionate 2nd-year undergraduate interested in information technology, problem-solving, and building practical solutions. I am working towards a career as a Business Analyst, combining technical skills with business acumen to create value.
           </p>
-          
+
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">
               View My Projects <ArrowRight size={18} />
             </a>
-            <a href="/cv/Hashini_Jayarathna_CV.pdf" className="btn btn-outline" download="Hashini_Jayarathna_CV.pdf">
+            <a href={`${base}cv/Hashini_Jayarathna_CV.pdf`} className="btn btn-outline" download="Hashini_Jayarathna_CV.pdf">
               Download CV <Download size={18} />
             </a>
             <a href="#contact" className="btn btn-outline">
@@ -40,9 +42,9 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="hero-image-container">
-          <img src="/profile.jpg" alt="Hashini Nurasha Jayarathna" className="hero-image" />
+          <img src={`${base}profile.jpg`} alt="Hashini Nurasha Jayarathna" className="hero-image" />
         </div>
       </div>
     </section>
