@@ -3,6 +3,8 @@ import { Code, ExternalLink, Clock } from 'lucide-react';
 import './Projects.css';
 
 const Projects = () => {
+  const base = import.meta.env.BASE_URL;
+
   const projectsList = [
     {
       id: 4,
@@ -12,7 +14,7 @@ const Projects = () => {
       contribution: '',
       technologies: ['IoT', 'Demand Forecasting', 'Supply Chain Management', 'Data Analysis'],
       features: [],
-      image: '/aquagrow.jpg',
+      image: `${base}aquagrow.jpg`,
       github: '',
       demo: ''
     },
