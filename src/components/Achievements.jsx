@@ -3,6 +3,8 @@ import { Award, Medal, FileCheck } from 'lucide-react';
 import './Achievements.css';
 
 const Achievements = () => {
+  const base = import.meta.env.BASE_URL;
+
   const achievements = [
     {
       type: 'certification',
@@ -10,7 +12,7 @@ const Achievements = () => {
       title: 'Business Analysis Basics',
       organization: 'Simplilearn',
       year: 'August 2026',
-      link: '/certificates/ba-cert.pdf'
+      link: `${base}certificates/ba-cert.pdf`
     },
     {
       type: 'award',
@@ -18,7 +20,7 @@ const Achievements = () => {
       title: 'IdeaSprint 2nd Runner-up',
       organization: 'University of Kelaniya',
       year: '2026',
-      link: '/certificates/ideasprint-cert.jpg'
+      link: `${base}certificates/ideasprint-cert.jpg`
     }
   ];
 
