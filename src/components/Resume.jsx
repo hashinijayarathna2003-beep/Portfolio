@@ -3,6 +3,8 @@ import { Download, FileText, CheckCircle } from 'lucide-react';
 import './Resume.css';
 
 const Resume = () => {
+  const base = import.meta.env.BASE_URL;
+
   const summaryPoints = [
     'BSc (Hons) in Management & Information Technology Undergraduate',
     'Enthusiastic about Business Analysis and requirements gathering',
@@ -35,14 +37,13 @@ const Resume = () => {
             </div>
             
             <a 
-              href="/[YOUR_CV_FILE_NAME].pdf" 
+              href={`${base}cv/Hashini_Jayarathna_CV.pdf`}
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-primary resume-btn"
             >
               <Download size={20} /> Download My CV
             </a>
-            <p className="resume-note">* Note: Replace the placeholder with the actual PDF link.</p>
           </div>
           
           <div className="resume-visual">
